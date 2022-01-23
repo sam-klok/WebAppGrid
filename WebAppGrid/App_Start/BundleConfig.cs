@@ -25,6 +25,13 @@ namespace WebAppGrid
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+
+            //Scripts for Grid.MVC
+            bundles.Add(new StyleBundle("~/Content/Gridmvc").Include(
+                      "~/Content/Gridmvc.css"));
+            bundles.Add(new ScriptBundle("~/bundles/Gridmvc").Include(
+                      "~/Scripts/gridmvc*"));
+
         }
     }
 }

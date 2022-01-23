@@ -1,51 +1,33 @@
 ﻿@model IEnumerable<WebAppGrid.Models.Person>
+@using GridMvc.Html
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Index Demo of Grid.MVC component";
 }
 
-<h2>Index</h2>
+<div class="row">
+    <div class="col-md-12">
+        @Html.Grid(Model).Named("PeopleGrid").Columns(c =>
+   {
+       c.Add(x => x.Name).Titled("Name").Filterable(true).Sortable(true);
+       c.Add(x => x.Age).Titled("Age").Filterable(true).Sortable(true);
+       c.Add(x => x.DOB).Titled("Date of Birth").Filterable(true).Sortable(true);
+       c.Add(x => x.HaveKids).Titled("Has Kids").Filterable(true).Sortable(true);
+   }).WithPaging(5).EmptyText("No data found")
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Name)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Age)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DOB)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.HaveKids)
-        </th>
-        <th></th>
-    </tr>
+        @*.Filterable(true).WithMultipleFilters()*@
+    </div>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Age)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DOB)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.HaveKids)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-        </td>
-    </tr>
-}
+</div>
 
-</table>
+    @* commented because of styles conflict
+        @section styles{
+            @Styles.Render("~/Content/Gridmvc")
+        }*@
+
+    @Styles.Render("~/Content/Gridmvc")
+
+    @section scripts{
+        @Scripts.Render("~/bundles/Gridmvc")
+    }
+
