@@ -18,3 +18,6 @@ which told me that jQuery is not loaded (see below).
 * Examples and documentation at: http://gridmvc.codeplex.com
 * Version: 3.0.0
 * Requires: window.jQuery v1.3+
+
+My answer is here: 
+https://stackoverflow.com/questions/25894890/sorting-filtering-attributes-not-working-in-grid-mvc/70826011#70826011
