@@ -15,9 +15,12 @@ https://www.youtube.com/watch?v=d-NCcY-J9B8
 which told me that jQuery is not loaded (see below). 
 
 * Grid.Mvc
-* Examples and documentation at: http://gridmvc.codeplex.com
 * Version: 3.0.0
 * Requires: window.jQuery v1.3+
 
 My answer is here: 
 https://stackoverflow.com/questions/25894890/sorting-filtering-attributes-not-working-in-grid-mvc/70826011#70826011
+
+3. Adding checkbox field:
+https://www.codeproject.com/Questions/1017965/How-to-add-checkbox-in-MVC-grid-using-bootsrap
+

@@ -13,6 +13,7 @@
        c.Add(x => x.Age).Titled("Age").Filterable(true).Sortable(true);
        c.Add(x => x.DOB).Titled("Date of Birth").Filterable(true).Sortable(true);
        c.Add(x => x.HaveKids).Titled("Has Kids").Filterable(true).Sortable(true);
+       c.Add().Titled("<input name='allChk' type='checkbox'/>").Encoded(false).Sanitized(false).SetWidth(30).RenderValueAs(o => Html.CheckBox("checked", false, new { name = "selectedIds", value = o.Name, OnClick = "selectedCheckbox(this,'" + o.Name + "');" }));
    }).WithPaging(5).EmptyText("No data found")
 
         @*.Filterable(true).WithMultipleFilters()*@
@@ -31,3 +32,4 @@
         @Scripts.Render("~/bundles/Gridmvc")
     }
 
+<script src="~/Scripts/Home/index.js"></script>
