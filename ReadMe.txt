@@ -24,3 +24,11 @@ https://stackoverflow.com/questions/25894890/sorting-filtering-attributes-not-wo
 3. Adding checkbox field:
 https://www.codeproject.com/Questions/1017965/How-to-add-checkbox-in-MVC-grid-using-bootsrap
 
+4. Adding checkbox bounded to object field:
+https://stackoverflow.com/questions/25605471/how-to-get-checkbox-row-value-selected-in-grid-mvc
+
+5. Maintain Grid MVC checkbox state from page to page in MVC Razor
+https://stackoverflow.com/questions/26403701/maintain-grid-mvc-checkbox-state-from-page-to-page-in-mvc-razor
+
+6. Maintain the value of checkbox in grid.mvc (so-so)
+https://stackoverflow.com/questions/38619653/maintain-the-value-of-checkbox-in-grid-mvc

@@ -15,16 +15,16 @@ namespace WebAppGrid.Controllers
         {
             people = new List<Person>() 
             {
-                new Person("Sam Klok",      30,DateTime.Parse("01/01/1980"),true),
-                new Person("Tristan",  10,DateTime.Parse("02/01/2010"),false),
-                new Person("McKayla",  09,DateTime.Parse("03/01/2012"),false),
-                new Person("Anastasia",20,DateTime.Parse("04/01/1980"),false),
-                new Person("Amanda",   25,DateTime.Parse("05/07/1980"),true),
-                new Person("Dedushka", 80,DateTime.Parse("05/16/1980"),true),
-                new Person("Babushka",  81,DateTime.Parse("08/01/1980"),true),
-                new Person("John Smith",    54,DateTime.Parse("12/01/1980"),false),
-                new Person("Joseph Boles",  65,DateTime.Parse("11/21/1980"),false),
-                new Person("Priyanka Agrwal",33,DateTime.Parse("01/01/1980"),false),
+                new Person( 1,"Sam Klok",       30,DateTime.Parse("01/01/1980"),true),
+                new Person( 2,"Tristan",        10,DateTime.Parse("02/01/2010"),false),
+                new Person( 3,"McKayla",        09,DateTime.Parse("03/01/2012"),false),
+                new Person( 4,"Anastasia",      20,DateTime.Parse("04/01/1980"),false),
+                new Person( 5,"Amanda",         25,DateTime.Parse("05/07/1980"),true),
+                new Person( 6,"Dedushka",       80,DateTime.Parse("05/16/1980"),true),
+                new Person( 7,"Babushka",       81,DateTime.Parse("08/01/1980"),true),
+                new Person( 8,"John Smith",     54,DateTime.Parse("12/01/1980"),false),
+                new Person( 9,"Joseph Boles",   65,DateTime.Parse("11/21/1980"),false),
+                new Person(10,"Priyanka Agrwal",33,DateTime.Parse("01/01/1980"),false),
             };
         }
 

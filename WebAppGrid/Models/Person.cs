@@ -7,17 +7,19 @@ namespace WebAppGrid.Models
 {
     public class Person
     {
-        public string Name{ get; set; }
+        public int Id { get; set; }
+        public string Name{ get; set; }  // It's unique
         public int Age { get; set; }
         public DateTime DOB { get; set; }
-        public bool HaveKids { get; set; }
+        public bool HasKids { get; set; }
 
-        public Person(string name, int age, DateTime dOB, bool haveKids)
+        public Person(int id, string name, int age, DateTime dOB, bool haveKids)
         {
+            Id = id;
             Name = name;
             Age = age;
             DOB = dOB;
-            HaveKids = haveKids;
+            HasKids = haveKids;
         }
     }
 }
