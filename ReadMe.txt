@@ -1,4 +1,7 @@
-I'm trying to play with popular GridMvc component.
+It's a demo how to work with popular GridMvc component.
+It can display boolean values as checkboxes.
+I'm using browser LocalStorage to persist user checked values on different pages.
+
 
 This is .Net Framework 4.7.2 and Grid.Mvc 3.0.0
 
