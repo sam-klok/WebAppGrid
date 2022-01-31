@@ -35,3 +35,6 @@ https://stackoverflow.com/questions/26403701/maintain-grid-mvc-checkbox-state-fr
 
 6. Maintain the value of checkbox in grid.mvc (so-so)
 https://stackoverflow.com/questions/38619653/maintain-the-value-of-checkbox-in-grid-mvc
+
+Open app at the URL:
+http://localhost:50830/
