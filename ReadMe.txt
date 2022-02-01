@@ -36,5 +36,16 @@ https://stackoverflow.com/questions/26403701/maintain-grid-mvc-checkbox-state-fr
 6. Maintain the value of checkbox in grid.mvc (so-so)
 https://stackoverflow.com/questions/38619653/maintain-the-value-of-checkbox-in-grid-mvc
 
-Open app at the URL:
+7.Open app at the URL:
 http://localhost:50830/
+
+8. Google Chrome redirecting localhost to https.
+Scroll all the way down to the section below and enter “localhost”, then click “Delete”.
+Steps:
+Go to Chrome or Edge browser and type following statement in address bar:
+chrome://net-internals/#hsts
+edge://net-internals/#hsts
+DELETE the localhost domain security polices using, by removing "localhost".
+https://stackoverflow.com/questions/25277457/google-chrome-redirecting-localhost-to-https
+https://stackoverflow.com/questions/63825407/microsoft-edge-redirects-http-localhost-to-https-localhost
+

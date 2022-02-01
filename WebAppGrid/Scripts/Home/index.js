@@ -55,8 +55,8 @@
             //console.log("pageIndex.Init() - called");
             setCheckboxesFromStorage();
         },
-        toStorage,   // making it public
-        showCheckedRecords,
+        toStorage: toStorage,   // making it public
+        showCheckedRecords: showCheckedRecords,
     };
 })(); // "dog balls"...
 
