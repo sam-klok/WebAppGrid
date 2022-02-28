@@ -49,3 +49,10 @@ DELETE the localhost domain security polices using, by removing "localhost".
 https://stackoverflow.com/questions/25277457/google-chrome-redirecting-localhost-to-https
 https://stackoverflow.com/questions/63825407/microsoft-edge-redirects-http-localhost-to-https-localhost
 
+9. Apparently there is issue filterning date fields, if they contain time.
+Date filter is not working in GridMvc
+https://stackoverflow.com/questions/33658193/date-filter-is-not-working-in-gridmvc
+
+Possible solution is to remove time part from the DateTime
+Example: use DateTime.Now.Date
+https://stackoverflow.com/questions/6121271/how-to-remove-time-portion-of-date-in-c-sharp-in-datetime-object-only
