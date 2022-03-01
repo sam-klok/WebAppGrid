@@ -11,14 +11,16 @@ namespace WebAppGrid.Models
         public string Name{ get; set; }  // It's unique
         public int Age { get; set; }
         public DateTime DOB { get; set; }
+        public DateTime? SchoolGraduation { get; set; }
         public bool HasKids { get; set; }
 
-        public Person(int id, string name, int age, DateTime dOB, bool haveKids)
+        public Person(int id, string name, int age, DateTime dOB, DateTime? schoolGraduation, bool haveKids)
         {
             Id = id;
             Name = name;
             Age = age;
             DOB = dOB;
+            SchoolGraduation = schoolGraduation;
             HasKids = haveKids;
         }
     }

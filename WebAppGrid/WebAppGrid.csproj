@@ -127,7 +127,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\NullableDateTimeHelper.cs" />
     <Compile Include="Models\Person.cs" />
+    <Compile Include="Models\PersonEnhanced.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -179,6 +181,7 @@
     <Content Include="Views\Shared\_GridPager.cshtml" />
     <Content Include="Views\Shared\_Grid.cshtml" />
     <Content Include="Views\Home\IndexClassic.cshtml" />
+    <Content Include="Views\Home\IndexEnhanced.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
