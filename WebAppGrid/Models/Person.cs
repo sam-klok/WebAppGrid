@@ -23,5 +23,17 @@ namespace WebAppGrid.Models
             SchoolGraduation = schoolGraduation;
             HasKids = haveKids;
         }
+
+        // to convert SchoolGraduation into Date only for better filtering in the MVC Grid
+        public DateTime? SchoolGraduationDateOnly
+        {
+            get
+            {
+                if (SchoolGraduation == null)
+                    return null;
+
+                return SchoolGraduation.Value.Date;
+            }
+        }
     }
 }

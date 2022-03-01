@@ -13,12 +13,12 @@
        c.Add(x => x.Name).Titled("Name").Filterable(true).Sortable(true);
        c.Add(x => x.Age).Titled("Age").Filterable(true).Sortable(true);
        c.Add(x => x.DOB.Date).Titled("Date of Birth").Filterable(true).Sortable(true);
-       //c.Add(x => x.SchoolGraduationDate).Titled("Date of Grad").Filterable(true).Sortable(true).Format("{0:d}");
-       c.Add(x => x.SchoolGraduation).Titled("Date of Grad").Filterable(true).Sortable(true).Format("{0:d}");
+       c.Add(x => x.SchoolGraduationDateOnly).Titled("Date of Grad").Filterable(true).Sortable(true).Format("{0:d}");
+
+       //c.Add(x => x.SchoolGraduation).Titled("Date of Grad").Filterable(true).Sortable(true).Format("{0:d}");
        //c.Add(x => x.SchoolGraduationDate == null ? (DateTime?)null : x.SchoolGraduationDate).Titled("Date of Grad").Filterable(true).Sortable(true).Format("{0:d}");
-
-
        //c.Add(x => x.HasKids).Titled("Has Kids").Filterable(true).Sortable(true);  // display as true-false text
+
        c.Add(x => x.HasKids).Titled("Has Kids").Filterable(true).Encoded(false).Sanitized(false).SetWidth(20).RenderValueAs(o => Html.CheckBox("cb" + o.Id, o.HasKids));
 
        c.Add().Titled("Select To Delete").Encoded(false).Sanitized(false).SetWidth(30).RenderValueAs(o => Html.CheckBox("cbxToDelete" + o.Id, false, new { name = "selectedIds", value = o.Id, OnClick = "pageIndex.toStorage(this,'" + o.Id + "');" }));
