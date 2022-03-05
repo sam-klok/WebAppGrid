@@ -21,8 +21,22 @@
 
        c.Add(x => x.HasKids).Titled("Has Kids").Filterable(true).Encoded(false).Sanitized(false).SetWidth(20).RenderValueAs(o => Html.CheckBox("cb" + o.Id, o.HasKids));
 
-       c.Add().Titled("Select To Delete").Encoded(false).Sanitized(false).SetWidth(30).RenderValueAs(o => Html.CheckBox("cbxToDelete" + o.Id, false, new { name = "selectedIds", value = o.Id, OnClick = "pageIndex.toStorage(this,'" + o.Id + "');" }));
+       //Let's use onClick javascript, which may be prohibited by Content Security Policy (CSP)
+       //c.Add()
+       // .Titled("To Delete")
+       // .Encoded(false)
+       // .Sanitized(false)
+       // .SetWidth(30)
+       // .RenderValueAs(o => Html.CheckBox("cbxToDelete" + o.Id, false, new { name = "selectedIds", @class = "cToDel1", value = o.Id, OnClick = "pageIndex.toStorage(this,'" + o.Id + "');" }));
+
        //c.Add().Titled("<input name='allChk' type='checkbox'/>").Encoded(false).Sanitized(false).SetWidth(30).RenderValueAs(o => Html.CheckBox("checked", false, new { name = "selectedIds", value = o.Name, OnClick = "selectedCheckbox(this,'" + o.Name + "');" }));
+
+       c.Add()
+        .Titled("<input type='checkbox' id='cbxSelectAll' name='cbxSelectAll'> To Delete")
+        .Encoded(false)
+        .Sanitized(false)
+        .SetWidth(30)
+        .RenderValueAs(o => Html.CheckBox("cbxToDelete" + o.Id, false, new { name = "selectedIds", @class="cbToDel", value = o.Id }));
 
    }).WithPaging(5).EmptyText("No data found")
 
@@ -37,6 +51,9 @@
 
 @section scripts{
     @Scripts.Render("~/bundles/Gridmvc")
-    <script src="~/Scripts/Home/index.js"></script>
+    <script>
+        var model = @Html.Raw(Json.Encode(Model));
+    </script>
+    <script src="~/Scripts/Home/pageIndex.js"></script>
 }
 
