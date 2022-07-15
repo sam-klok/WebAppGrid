@@ -1,0 +1,30 @@
+﻿@model IEnumerable<WebAppGrid.Models.Person>
+@using WebAppGrid.Helpers
+@using GridMvc.Html
+
+@Styles.Render("~/Content/Gridmvc")
+
+
+<div class="row">
+    <div class="col-md-12">
+        @Html.Grid(Model).Named("PeopleGrid").Columns(c =>
+        {
+            c.Add(x => x.Name).Titled("Name").Filterable(true).Sortable(true);
+            c.Add(x => x.Age).Titled("Age").Filterable(true).Sortable(true);
+            c.Add(x => x.DOB.Date).Titled("Date of Birth").Filterable(true).Sortable(true);
+        }).WithPaging(5).EmptyText("No data found")
+    </div>
+    <div>
+        <button onclick="pageIndex.showCheckedRecords()">Show checked records</button>
+    </div>
+</div>
+
+
+
+@section scripts{
+    @Scripts.Render("~/bundles/Gridmvc")
+    @*<script>
+            var model = @Html.Raw(Json.Encode(Model));
+        </script>*@
+    @*<script src="~/Scripts/Home/pageIndex.js"></script>*@
+}

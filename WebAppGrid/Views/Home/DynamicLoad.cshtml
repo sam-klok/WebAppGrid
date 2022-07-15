@@ -1,0 +1,27 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>DynamicLoad</title>
+    @Styles.Render("~/Content/Gridmvc")
+
+</head>
+<body>
+    <div>
+        @{
+            Html.RenderAction("Small", "Home");
+        }
+    </div>
+</body>
+</html>
+
+
+@section scripts{
+    @Scripts.Render("~/bundles/Gridmvc")
+}

@@ -75,7 +75,15 @@ namespace WebAppGrid.Controllers
             return View();
         }
 
+        public ActionResult DynamicLoad()
+        {
+            return View();
+        }
 
+        public ActionResult Small()
+        {
+            return PartialView("_Small", people);
+        }
 
     }
 }

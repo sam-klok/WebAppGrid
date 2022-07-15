@@ -2,6 +2,10 @@ It's a demo how to work with popular GridMvc component.
 It can display boolean values as checkboxes.
 I'm using browser LocalStorage to persist user checked values on different pages.
 
+Use URL: 
+http://localhost:50832
+or 
+http://localhost:50832/Home/Index
 
 This is .Net Framework 4.7.2 and Grid.Mvc 3.0.0
 
@@ -56,3 +60,8 @@ https://stackoverflow.com/questions/33658193/date-filter-is-not-working-in-gridm
 Possible solution is to remove time part from the DateTime
 Example: use DateTime.Now.Date
 https://stackoverflow.com/questions/6121271/how-to-remove-time-portion-of-date-in-c-sharp-in-datetime-object-only
+
+
+10. Partial View rendering could be tricky too
+use URL:
+http://localhost:50832/Home/DynamicLoad
