@@ -102,7 +102,11 @@
         });
     };
 
-    
+    function setDatePicker() {
+        $('.datepicker').datepicker({
+            format: 'mm/dd/yyyy'
+        });
+    }
 
     return {
         Init: function () {
@@ -110,6 +114,7 @@
             setCheckboxesFromStorage();
             addOnClickToSelectAll();
             addOnClickToCheckboxes();
+            setDatePicker();
         },
         toStorage: toStorage,   // making it public
         showCheckedRecords: showCheckedRecords,

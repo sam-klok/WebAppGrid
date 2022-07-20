@@ -6,6 +6,11 @@
     ViewBag.Title = "Index Demo of Grid.MVC component";
 }
 
+@Styles.Render("~/Content/css")
+@Styles.Render("~/Content/Gridmvc")
+
+@*@Styles.Render("~/Content/gridmvc.datepicker")*@
+
 <div class="row">
     <div class="col-md-12">
         @Html.Grid(Model).Named("PeopleGrid").Columns(c =>
@@ -36,7 +41,7 @@
         .Encoded(false)
         .Sanitized(false)
         .SetWidth(30)
-        .RenderValueAs(o => Html.CheckBox("cbxToDelete" + o.Id, false, new { name = "selectedIds", @class="cbToDel", value = o.Id }));
+        .RenderValueAs(o => Html.CheckBox("cbxToDelete" + o.Id, false, new { name = "selectedIds", @class = "cbToDel", value = o.Id }));
 
    }).WithPaging(5).EmptyText("No data found")
 
@@ -47,9 +52,10 @@
     </div>
 </div>
 
-@Styles.Render("~/Content/Gridmvc")
+
 
 @section scripts{
+    @Scripts.Render("~/bundles/bootstrap")
     @Scripts.Render("~/bundles/Gridmvc")
     <script>
         var model = @Html.Raw(Json.Encode(Model));
