@@ -26,7 +26,8 @@ namespace WebAppGrid.Controllers
                 new Person( 9,"Joseph Boles",   65,DateTime.Parse("11/21/1980")        ,null                                   ,false),
                 new Person(10,"Priyanka Agrwal",33,DateTime.Parse("01/01/1980")        ,null                                   ,false),
                 new Person(11,"Solomon Klokov", 0 ,DateTime.Parse("02/28/2022 10:30")  ,null                                   ,false),
-                new Person(10,"Solomeya Klokov",0 ,DateTime.Now                        ,null                                   ,false),
+                new Person(12,"Solomeya Klokov",0 ,DateTime.Now                        ,null                                   ,false),
+                new Person(13,"Archie - bald",  2 ,DateTime.Parse("05/15/2020")        ,null                                   ,false),
             };
         }
 
