@@ -86,5 +86,9 @@ namespace WebAppGrid.Controllers
             return PartialView("_Small", people);
         }
 
+        public ActionResult WithDD()
+        {
+            return View(people);
+        }
     }
 }

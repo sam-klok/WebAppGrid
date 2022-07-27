@@ -184,6 +184,7 @@
     <Content Include="Views\Home\IndexClassic.cshtml" />
     <Content Include="Views\Home\IndexEnhanced.cshtml" />
     <Content Include="Views\Home\_Small.cshtml" />
+    <Content Include="Views\Home\WithDD.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
