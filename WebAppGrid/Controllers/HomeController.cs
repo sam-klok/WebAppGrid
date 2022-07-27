@@ -86,9 +86,20 @@ namespace WebAppGrid.Controllers
             return PartialView("_Small", people);
         }
 
-        public ActionResult WithDD()
+        public ActionResult WithDD(int id = 0)
         {
-            return View(people);
+            List<Person> page; // = new List<Person>();
+
+            if (id == 0)
+            {
+                page = people.Take(7).ToList();
+            }
+            else
+            {
+                page = people.Skip(7).Take(7).ToList();
+            }
+
+            return View(page);
         }
     }
 }

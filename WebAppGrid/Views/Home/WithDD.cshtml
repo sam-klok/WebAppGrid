@@ -10,7 +10,13 @@
 @Styles.Render("~/Content/Gridmvc")
 
 @*@Styles.Render("~/Content/gridmvc.datepicker")*@
-
+<div>
+    @Html.DropDownList("ddPages", new List<SelectListItem>
+    {
+       new SelectListItem{ Text="First", Value = "0" },
+       new SelectListItem{ Text="Second", Value = "1" },
+    })
+</div>
 <div class="row">
     <div class="col-md-12">
         @Html.Grid(Model).Named("PeopleGrid").Columns(c =>
@@ -36,6 +42,6 @@
     <script>
         var model = @Html.Raw(Json.Encode(Model));
     </script>
-    <script src="~/Scripts/Home/pageIndex.js"></script>
+    <script src="~/Scripts/Home/withDD.js"></script>
 }
 
