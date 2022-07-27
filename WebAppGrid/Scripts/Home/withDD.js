@@ -1,31 +1,26 @@
 ﻿var page = (function () {
 
+    function DdPagesSetOnChange() {
+        $("#ddPages").change(
+            function () {
+                var id = $("#ddPages").val();
+                var url = "/Home/WithDD?id=" + id;
+
+                console.log('url=' + url);
+                location.href = url;
+                console.log('url=' + url);
+            })
+    }
+
     return {
         Init: function () {
-            $("#ddPages").change(
-                function () {
+            DdPagesSetOnChange();
 
-                    var id = $("#ddPages").val();
-                    var url = "/Home/WithDD/" + id;
-                    
-                    location.href = url;
-                    console.log('url=' + url);
-
-                //    $.ajax({
-                //        url: url,
-                //        type: 'GET',
-                //        //context: document.body
-                //        success: function (resp) {
-                //            console.log('Success: ' + resp);
-                //        },
-                //        error: function (e) {
-                //            console.log('Error: ' + e);
-                //        }
-                //    }).done(function () {
-                //        console.log('done');
-                //    });
-                })
-
+            let searchParams = new URLSearchParams(window.location.search);
+            if (searchParams.has('id')) {
+                let param_id = searchParams.get('id');
+                $("#ddPages").val(param_id);
+            }
         },
 
         //$("#ddPages").val()
