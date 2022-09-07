@@ -9,7 +9,12 @@ namespace WebAppGrid.Models
     {
         public int Id { get; set; }
         public string Name{ get; set; }  // It's unique
+        public string Name2 { get { return Name;  } }  // for second grid on the page
+
         public int Age { get; set; }
+        public int Age2 { get { return Age; } }
+
+
         public DateTime DOB { get; set; }
         public DateTime? SchoolGraduation { get; set; }
         public bool HasKids { get; set; }

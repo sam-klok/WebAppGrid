@@ -101,5 +101,10 @@ namespace WebAppGrid.Controllers
 
             return View(page);
         }
+
+        public ActionResult TwoGrids()
+        {
+            return View(people);
+        }
     }
 }

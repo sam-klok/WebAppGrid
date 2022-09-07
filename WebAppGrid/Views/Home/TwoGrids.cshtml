@@ -1,0 +1,33 @@
+﻿@model IEnumerable<WebAppGrid.Models.Person>
+@using WebAppGrid.Helpers
+@using GridMvc.Html
+
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+<link href="~/Content/Gridmvc.css" rel="stylesheet" />
+
+<div>Attempt to use independed multiple "GridMvc" grids on the same page.</div>
+<div>Unfortunately independent filtering it's not possible</div>
+<div>We are using Grid.Mvc 3.0.0 by Vyacheslav Bukharin</div>
+<div class="row">
+    <div class="col-md-10">
+        @Html.Grid(Model).Named("topGrid").Columns(c =>
+        {
+            c.Add(x => x.Name).Titled("Name").Filterable(true).Sortable(true);
+            c.Add(x => x.Age).Titled("Age").Filterable(true).Sortable(true);
+        }).WithPaging(5).EmptyText("No data found").Filterable().WithMultipleFilters()
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-10">
+        @Html.Grid(Model).Named("bottomGird").Columns(c =>
+        {
+            c.Add(x => x.Name2).Titled("Name").Filterable(true).Sortable(true);
+            c.Add(x => x.Age2).Titled("Age").Filterable(true).Sortable(true);
+        }).WithPaging(5).EmptyText("No data found").Filterable().WithMultipleFilters()
+    </div>
+</div>
+
+<script src="~/Scripts/jquery-3.4.1.js"></script>
+<script src="~/Scripts/bootstrap.js"></script>
+<script src="~/Scripts/gridmvc.js"></script>
+
