@@ -8,7 +8,7 @@
 <div>Attempt to use independed multiple "GridMvc" grids on the same page.</div>
 <div>Unfortunately independent filtering it's not possible</div>
 <div>We are using Grid.Mvc 3.0.0 by Vyacheslav Bukharin</div>
-<div class="row">
+<div id="topGrid" class="row">
     <div class="col-md-10">
         @Html.Grid(Model).Named("topGrid").Columns(c =>
         {
@@ -17,7 +17,7 @@
         }).WithPaging(5).EmptyText("No data found").Filterable().WithMultipleFilters()
     </div>
 </div>
-<div class="row">
+<div id="bottomGrid" class="row">
     <div class="col-md-10">
         @Html.Grid(Model).Named("bottomGird").Columns(c =>
         {
