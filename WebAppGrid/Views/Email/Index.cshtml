@@ -1,0 +1,36 @@
+﻿@model IEnumerable<WebAppGrid.Models.EmailAddress>
+@using WebAppGrid.Helpers
+@using GridMvc.Html
+
+@{
+    ViewBag.Title = "Edit Email Address List";
+}
+
+@Styles.Render("~/Content/css")
+@Styles.Render("~/Content/Gridmvc")
+
+<div class="row">
+    <div class="col-md-12">
+        @Html.Grid(Model).Named("EmailListGrid").Columns(c =>
+        {
+            c.Add(x => x.Email).Titled("Email").Filterable(true).Sortable(true);
+            c.Add(x => x.Active).Titled("Active").Filterable(true).Sortable(true);
+            c.Add(x => x.FirstName).Titled("First Name").Filterable(true).Sortable(true);
+            c.Add(x => x.LastName).Titled("Last Name").Filterable(true).Sortable(true);
+            c.Add(x => x.Comment).Titled("Comment").Filterable(true).Sortable(true);
+
+        }).WithPaging(5).EmptyText("No data found")
+    </div>
+</div>
+
+
+
+@section scripts{
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/Gridmvc")
+    <script>
+        var model = @Html.Raw(Json.Encode(Model));
+    </script>
+    @*<script src="~/Scripts/Home/pageIndex.js"></script>*@
+}
+
