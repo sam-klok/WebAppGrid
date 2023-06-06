@@ -54,7 +54,6 @@ namespace WebAppGrid.Controllers
             Session["DistributionList"] = dl;
 
             return RedirectToAction("Index");
-            //return RedirectToAction("Index", distributionList);
         }
 
     }
