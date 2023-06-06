@@ -182,6 +182,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\DynamicLoad.cshtml" />
     <Content Include="Views\Email\Index.cshtml" />
+    <Content Include="Views\Email\Edit.cshtml" />
     <None Include="Views\Home\IndexBak.cshtml" />
     <Content Include="Views\Shared\_GridPager.cshtml" />
     <Content Include="Views\Shared\_Grid.cshtml" />
