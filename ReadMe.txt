@@ -65,3 +65,11 @@ https://stackoverflow.com/questions/6121271/how-to-remove-time-portion-of-date-i
 10. Partial View rendering could be tricky too
 use URL:
 http://localhost:50832/Home/DynamicLoad
+
+
+11. Email attibutes
+https://stackoverflow.com/questions/16712043/email-address-validation-using-asp-net-mvc-data-type-attributes
+
+12. Link button style
+https://stackoverflow.com/questions/596444/html-actionlink-as-a-button-or-an-image-not-a-link
+https://www.w3schools.com/bootstrap/bootstrap_grid_medium.asp

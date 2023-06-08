@@ -71,6 +71,32 @@ namespace WebAppGrid.Controllers
             return RedirectToAction("Index");
         }
 
+        // GET: Email/Delete/5
+        public ActionResult Delete(int id)
+        {
+            var dl = (List<EmailAddress>)Session["DistributionList"];
+            EmailAddress model = dl.FirstOrDefault(x => x.ID == id);
+            return View(model);
+        }
+
+        // POST: Email/Delete/5
+        [HttpPost]
+        public ActionResult Delete(int id, FormCollection collection)
+        {
+            try
+            {
+                var dl = (List<EmailAddress>)Session["DistributionList"];
+                EmailAddress model = dl.FirstOrDefault(x => x.ID == id);
+                dl.Remove(model);
+                Session["DistributionList"] = dl;
+
+                return RedirectToAction("Index");
+            }
+            catch
+            {
+                return View();
+            }
+        }
 
     }
 
