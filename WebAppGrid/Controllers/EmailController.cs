@@ -10,8 +10,6 @@ namespace WebAppGrid.Controllers
 {
     public class EmailController : Controller
     {
-        //public List<EmailAddress> distributionList;
-
         public EmailController() {
             if (System.Web.HttpContext.Current.Session["DistributionList"] == null)
             {
@@ -32,7 +30,24 @@ namespace WebAppGrid.Controllers
             return View(dl);
         }
 
-        public ActionResult Edit(int id) {
+        public ActionResult Create()
+        {
+            var model = new EmailAddress();
+            return View(model);
+        }
+
+        [HttpPost]
+        public ActionResult Create(EmailAddress model)
+        {
+            List<EmailAddress> dl = (List<EmailAddress>)Session["DistributionList"];
+            dl.Add(model);
+
+            Session["DistributionList"] = dl;
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult Edit(int id)
+        {
             List<EmailAddress> dl = (List<EmailAddress>)Session["DistributionList"];
             EmailAddress model = dl.FirstOrDefault(x => x.ID == id);
 
@@ -48,13 +63,14 @@ namespace WebAppGrid.Controllers
             m.Email = model.Email;
             m.LastName = model.LastName;
             m.FirstName = model.FirstName;
-            m.Active= model.Active;
-            m.Comment= model.Comment;
+            m.Active = model.Active;
+            m.Comment = model.Comment;
 
             Session["DistributionList"] = dl;
 
             return RedirectToAction("Index");
         }
+
 
     }
 
