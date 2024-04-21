@@ -125,6 +125,8 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\EmailController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MultiselectDemoController.cs" />
+    <Compile Include="Models\SoccerClub.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -193,6 +195,7 @@
     <Content Include="Views\Home\_Small.cshtml" />
     <Content Include="Views\Home\WithDD.cshtml" />
     <Content Include="Views\Home\TwoGrids.cshtml" />
+    <Content Include="Views\MultiselectDemo\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
