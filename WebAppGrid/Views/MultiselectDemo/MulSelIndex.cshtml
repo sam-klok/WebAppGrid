@@ -1,10 +1,8 @@
 ﻿@model WebAppGrid.Models.SoccerClub
 
-@{
-    Layout = null;
-}
-
 @Styles.Render("~/Content/css")
+<link href="~/Scripts/jquery-ui-1.13.2/jquery-ui.css" rel="stylesheet" />
+<link href="~/Scripts/jquery-ui-multiselect-widget/css/jquery.multiselect.css" rel="stylesheet" />
 
 @using (Html.BeginForm())
 {
@@ -42,11 +40,12 @@
 @section scripts{
     @Scripts.Render("~/bundles/bootstrap")
     @Scripts.Render("~/bundles/jquery")
-    
-    <script>
-        //var model = @Html.Raw(Json.Encode(Model));
-    </script>
-    @*<script src="~/Scripts/Home/pageIndex.js"></script>*@
+    <script src="~/Scripts/jquery-ui-1.13.2/jquery-ui.js"></script>
     <script src="~/Scripts/jquery-ui-multiselect-widget/src/jquery.multiselect.js"></script>
+
+    @*<script>
+            var model = @Html.Raw(Json.Encode(Model));
+        </script>
+        <script src="~/Scripts/Home/pageIndex.js"></script>*@
 }
 
