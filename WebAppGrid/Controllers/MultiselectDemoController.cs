@@ -39,7 +39,7 @@ namespace WebAppGrid.Controllers
             
         }
 
-        public ActionResult Index()
+        public ActionResult MulSelIndex()
         {
             return View(soccerClub);
         }

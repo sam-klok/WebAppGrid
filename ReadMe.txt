@@ -73,3 +73,7 @@ https://stackoverflow.com/questions/16712043/email-address-validation-using-asp-
 12. Link button style
 https://stackoverflow.com/questions/596444/html-actionlink-as-a-button-or-an-image-not-a-link
 https://www.w3schools.com/bootstrap/bootstrap_grid_medium.asp
+
+13. Multiselet Dropdown - JQuery widget
+I didnt' use command: npm i jquery-ui-multiselect-widget
+But added folder manually.
