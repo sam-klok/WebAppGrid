@@ -75,5 +75,6 @@ https://stackoverflow.com/questions/596444/html-actionlink-as-a-button-or-an-ima
 https://www.w3schools.com/bootstrap/bootstrap_grid_medium.asp
 
 13. Multiselet Dropdown - JQuery widget
-I didnt' use command: npm i jquery-ui-multiselect-widget
-But added folder manually.
+https://ehynds.github.io/jquery-ui-multiselect-widget/
+https://github.com/ehynds/jquery-ui-multiselect-widget
+I didnt' use command: npm i jquery-ui-multiselect-widget But added folder manually.

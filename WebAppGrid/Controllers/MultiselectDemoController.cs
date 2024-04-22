@@ -14,7 +14,7 @@ namespace WebAppGrid.Controllers
         SoccerClub soccerClub = new SoccerClub()
         {
             Name = "Family Club",
-            Players = "Sam Klok;Tristan;McKayla" // comma separated list
+            Players = "Sam Klok,Tristan,McKayla" // comma separated list
         };
 
         public MultiselectDemoController()
@@ -43,5 +43,7 @@ namespace WebAppGrid.Controllers
         {
             return View(soccerClub);
         }
+
+        
     }
 }
