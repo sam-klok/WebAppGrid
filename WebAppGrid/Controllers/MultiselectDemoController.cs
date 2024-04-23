@@ -37,7 +37,7 @@ namespace WebAppGrid.Controllers
             var soccerClub = new SoccerClub()
             {
                 Name = "Family Club",
-                Players = "Sam Klok,Tristan,McKayla".Split(','), // comma separated list
+                Players = "Sam Klok;Tristan;McKayla".Split(';'), // comma separated list
                 //PlayersOptions = people.Select(p => new SelectListItem { Value = p.Name }).ToList()
                 //PlayersOptions = people.Select(p => new SelectListItem { Text = p.Name, Value = p.Id.ToString() }).ToList()
                 PlayersOptions = people.Select(p => new SelectListItem { Text = p.Name, Value = p.Name }).ToList()

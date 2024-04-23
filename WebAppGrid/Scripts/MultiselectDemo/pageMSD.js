@@ -6,7 +6,7 @@
                 if (sCount) {
                     return $.map(els, function (el) {
                         return $(el).val()
-                    }).join()
+                    }).join(";")  // any separator we need (comma is default)
                 } else {
                     'None'
                 }
