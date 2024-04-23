@@ -78,3 +78,7 @@ https://www.w3schools.com/bootstrap/bootstrap_grid_medium.asp
 https://ehynds.github.io/jquery-ui-multiselect-widget/
 https://github.com/ehynds/jquery-ui-multiselect-widget
 I didnt' use command: npm i jquery-ui-multiselect-widget But added folder manually.
+See screen shot 08.
+
+13.2 To display comma separated list in the header (see screen shot 09)
+https://stackoverflow.com/questions/29058753/jquery-ui-multi-select-shows-comma-separated-texts

@@ -8,52 +8,48 @@
 {
     @Html.AntiForgeryToken()
 
-<div class="form-horizontal">
-    <h4>SoccerClub</h4>
-    <hr />
-    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-    <div class="form-group">
-        @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
-            @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+    <div class="form-horizontal">
+        <h4>SoccerClub</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+            </div>
         </div>
-    </div>
 
-    <div class="form-group">
-        @Html.LabelFor(model => model.Players, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            @Html.EditorFor(model => model.Players, new { htmlAttributes = new { @class = "form-control" } })
-            @Html.ValidationMessageFor(model => model.Players, "", new { @class = "text-danger" })
-        </div>
-    </div>
+        @*<div class="form-group">
+                @Html.LabelFor(model => model.Players, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Players, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Players, "", new { @class = "text-danger" })
+                </div>
+            </div>*@
 
-    <div class="form-group">
-        @Html.LabelFor(model => model.Players, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            @Html.EditorFor(model => model.Players, new { htmlAttributes = new { id="Players2", @class = "form-control" } })
-            @Html.ValidationMessageFor(model => model.Players, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.Players, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @*@Html.ListBoxFor(model => model.Players, Model.PlayersOptions, new { @class = "multiselect", style = "width:600px" })*@
+                @Html.ListBoxFor(model => model.Players, Model.PlayersOptions, new { style = "width:600px" })
+            </div>
         </div>
-    </div>
 
-    <div class="form-group">
-        <div class="col-md-offset-2 col-md-10">
-            <input type="submit" value="Save" class="btn btn-default" />
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
         </div>
     </div>
-</div>
 }
-
 
 @section scripts{
     @Scripts.Render("~/bundles/bootstrap")
     @Scripts.Render("~/bundles/jquery")
     <script src="~/Scripts/jquery-ui-1.13.2/jquery-ui.js"></script>
     <script src="~/Scripts/jquery-ui-multiselect-widget/src/jquery.multiselect.js"></script>
-
-    @*<script>
-            var model = @Html.Raw(Json.Encode(Model));
-        </script>
-        <script src="~/Scripts/Home/pageIndex.js"></script>*@
+    <script src="~/Scripts/MultiselectDemo/pageMSD.js"></script>
+    
 }
 

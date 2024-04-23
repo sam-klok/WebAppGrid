@@ -11,12 +11,6 @@ namespace WebAppGrid.Controllers
     {
         List<Person> people;
 
-        SoccerClub soccerClub = new SoccerClub()
-        {
-            Name = "Family Club",
-            Players = "Sam Klok,Tristan,McKayla" // comma separated list
-        };
-
         public MultiselectDemoController()
         {
             people = new List<Person>()
@@ -36,14 +30,26 @@ namespace WebAppGrid.Controllers
                 new Person(13,"Archie - bald",  2 ,DateTime.Parse("05/15/2020")        ,null                                   ,false),
             };
 
-            
         }
-
+    
         public ActionResult MulSelIndex()
         {
+            var soccerClub = new SoccerClub()
+            {
+                Name = "Family Club",
+                Players = "Sam Klok,Tristan,McKayla".Split(','), // comma separated list
+                //PlayersOptions = people.Select(p => new SelectListItem { Value = p.Name }).ToList()
+                //PlayersOptions = people.Select(p => new SelectListItem { Text = p.Name, Value = p.Id.ToString() }).ToList()
+                PlayersOptions = people.Select(p => new SelectListItem { Text = p.Name, Value = p.Name }).ToList()
+            };
+
             return View(soccerClub);
         }
 
+        //public List<string> PeopleNames()
+        //{
+        //    return people.Select(p => p.Name).ToList();
+        //}
         
     }
 }
