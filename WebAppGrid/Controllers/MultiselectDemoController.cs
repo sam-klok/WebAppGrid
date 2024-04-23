@@ -46,10 +46,12 @@ namespace WebAppGrid.Controllers
             return View(soccerClub);
         }
 
-        //public List<string> PeopleNames()
-        //{
-        //    return people.Select(p => p.Name).ToList();
-        //}
-        
+        [HttpPost]
+        public ActionResult MulSelIndex(SoccerClub soccerClub)
+        {
+            System.Diagnostics.Debug.Write(soccerClub);
+
+            return View(soccerClub);
+        }
     }
 }
