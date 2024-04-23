@@ -82,3 +82,5 @@ See screen shot 08.
 
 13.2 To display comma separated list in the header (see screen shot 09)
 https://stackoverflow.com/questions/29058753/jquery-ui-multi-select-shows-comma-separated-texts
+13.3 Issue with width of this component
+https://stackoverflow.com/questions/41017788/unable-to-set-the-width-of-jquery-multi-select/78374927#78374927

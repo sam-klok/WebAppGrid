@@ -12,6 +12,9 @@
                 }
             }
         });
+        //$('.ui-multiselect').css('width', '800px');  // apply custom width to the drop down
+        //$('.ui-multiselect-menu').css('width', '700px');  // apply custom width to the drop down
+        
     }
 
     return {

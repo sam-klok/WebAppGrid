@@ -4,6 +4,12 @@
 <link href="~/Scripts/jquery-ui-1.13.2/jquery-ui.css" rel="stylesheet" />
 <link href="~/Scripts/jquery-ui-multiselect-widget/css/jquery.multiselect.css" rel="stylesheet" />
 
+<style>
+    #Players {
+        width: 800px;
+    }
+</style>
+
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
@@ -32,7 +38,8 @@
             @Html.LabelFor(model => model.Players, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @*@Html.ListBoxFor(model => model.Players, Model.PlayersOptions, new { @class = "multiselect", style = "width:600px" })*@
-                @Html.ListBoxFor(model => model.Players, Model.PlayersOptions, new { style = "width:900px" })
+                @Html.ListBoxFor(model => model.Players, Model.PlayersOptions)
+                @*, new { style = "width:900px" }*@
             </div>
         </div>
 
